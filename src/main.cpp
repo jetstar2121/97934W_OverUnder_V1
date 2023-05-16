@@ -25,19 +25,19 @@ Drive chassis(
 //Specify your drive setup below. There are seven options:
 //ZERO_TRACKER, TANK_ONE_ENCODER, TANK_ONE_ROTATION, TANK_TWO_ENCODER, TANK_TWO_ROTATION, HOLONOMIC_TWO_ENCODER, and HOLONOMIC_TWO_ROTATION
 //For example, if you are not using odometry, put ZERO_TRACKER below:
-ZERO_TRACKER,
+TANK_TWO_ROTATION,
 
 //Add the names of your Drive motors into the motor groups below, separated by commas, i.e. motor_group(Motor1,Motor2,Motor3).
 //You will input whatever motor names you chose when you configured your robot using the sidebar configurer, they don't have to be "Motor1" and "Motor2".
 
 //Left Motors:
-motor_group(),
+motor_group(front_left, mid_left, back_left),
 
 //Right Motors:
-motor_group(),
+motor_group(front_right, mid_right, back_right),
 
 //Specify the PORT NUMBER of your inertial sensor, in PORT format (i.e. "PORT1", not simply "1"):
-PORT1,
+PORT7,
 
 //Input your wheel diameter. (4" omnis are actually closer to 4.125"):
 3.25,
