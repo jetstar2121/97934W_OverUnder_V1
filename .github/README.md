@@ -2,6 +2,8 @@
 
 The initial program for VRC Team 97934W's 2023-2024 Season
 
-Programming done by Patrick Hanley
+Lead Programmer and Project Manager: Patrick Hanley
 
-***This program is based upon the JAR-Template created by Jackson Area***
+Secondary Programmer: Beetle Bowling
+
+***This program is based upon the JAR-Template created by Jackson Area Robotics***
