@@ -5,6 +5,8 @@ extern brain Brain;
 // VEXcode devices
 extern controller Controller1;
 
+extern distance Distance;
+
 extern inertial inertial1;
 
 extern motor front_right;
