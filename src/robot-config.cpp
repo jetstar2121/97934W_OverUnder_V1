@@ -10,8 +10,6 @@ brain  Brain;
 // VEXcode device constructors - TEMPORARY PORTS
 controller Controller1;
 
-distance Distance(PORT7);
-
 inertial inertial1(PORT7);
 
 motor front_right(PORT1, ratio18_1);
