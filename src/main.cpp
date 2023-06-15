@@ -40,12 +40,12 @@ motor_group(front_right, mid_right, back_right),
 PORT7,
 
 //Input your wheel diameter. (4" omnis are actually closer to 4.125"):
-3.25,
+4.125,
 
 //External ratio, must be in decimal, in the format of input teeth/output teeth.
 //If your motor has an 84-tooth gear and your wheel has a 60-tooth gear, this value will be 1.4.
 //If the motor drives the wheel directly, this value is 1:
-1.6,
+.57,
 
 //Gyro scale, this is what your gyro reads when you spin the robot 360 degrees.
 //For most cases 360 will do fine here, but this scale factor can be very helpful when precision is necessary.
