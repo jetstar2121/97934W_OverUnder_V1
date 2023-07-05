@@ -40,7 +40,7 @@ motor_group(front_right, mid_right, back_right),
 PORT7,
 
 //Input your wheel diameter. (4" omnis are actually closer to 4.125"):
-3.25,
+4.125,
 
 //External ratio, must be in decimal, in the format of input teeth/output teeth.
 //If your motor has an 84-tooth gear and your wheel has a 60-tooth gear, this value will be 1.4.
@@ -195,10 +195,7 @@ void usercontrol(void) {
     // Each time through the loop your program should update motor + servo
     // values based on feedback from the joysticks.
 
-    // ........................................................................
-    // Insert user code here. This is where you use the joystick values to
-    // update your motors, etc.
-    // ........................................................................
+    
 
     //Replace this line with chassis.control_tank(); for tank drive.
     chassis.control_arcade();
