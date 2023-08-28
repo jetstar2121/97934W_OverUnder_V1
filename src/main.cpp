@@ -195,11 +195,11 @@ void usercontrol(void) {
     // Each time through the loop your program should update motor + servo
     // values based on feedback from the joysticks.
 
-    if(Controller1.ButtonA.pressing()) {
-      intakes.spin(fwd, 2, rpm);
+    if(Controller1.ButtonR2.pressing()) {
+      intakes.spin(fwd, 600, rpm);
     }
-    else if(Controller1.ButtonB.pressing()) {
-      intakes.spin(reverse, 2, rpm);
+    else if(Controller1.ButtonR1.pressing()) {
+      intakes.spin(reverse, 600, rpm);
     }
     else {
       intakes.stop(brake);
