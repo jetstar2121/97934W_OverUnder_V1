@@ -64,7 +64,7 @@ PORT7,
 
 //Input your drive motors by position. This is only necessary for holonomic drives, otherwise this section can be left alone.
 //LF:      //RF:    
-PORT1,     -PORT2,
+PORT1,     -PORT2,   
 
 //LB:      //RB: 
 PORT3,     -PORT4,
@@ -194,6 +194,16 @@ void usercontrol(void) {
     // This is the main execution loop for the user control program.
     // Each time through the loop your program should update motor + servo
     // values based on feedback from the joysticks.
+
+    if(Controller1.ButtonA.pressing()) {
+      intakes.spin(fwd, 2, rpm);
+    }
+    else if(Controller1.ButtonB.pressing()) {
+      intakes.spin(reverse, 2, rpm);
+    }
+    else {
+      intakes.stop(brake);
+    }
 
     
 

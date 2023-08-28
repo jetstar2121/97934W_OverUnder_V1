@@ -17,6 +17,8 @@ extern motor front_left;
 extern motor mid_left;
 extern motor back_left;
 
+extern motor intakes;
+
 
 /**
  * Used to initialize code/tasks/devices added using tools in VEXcode Pro.

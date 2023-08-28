@@ -14,13 +14,16 @@ distance Distance(PORT8);
 
 inertial inertial1(PORT7);
 
-motor front_right(PORT1, ratio18_1);
+motor front_right(PORT1, ratio18_1, false);
 motor mid_right(PORT2, ratio18_1);
 motor back_right(PORT3, ratio18_1);
 
-motor front_left(PORT4, ratio18_1);
+motor front_left(PORT7, ratio18_1, false);
 motor mid_left(PORT5, ratio18_1);
 motor back_left(PORT6, ratio18_1);
+
+motor intakes(PORT1, ratio18_1, true);
+
 
 // VEXcode generated functions
 
