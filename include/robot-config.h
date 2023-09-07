@@ -7,6 +7,8 @@ extern controller Controller1;
 
 extern distance Distance;
 
+extern pneumatics PTO;
+
 extern inertial inertial1;
 
 extern motor front_right;

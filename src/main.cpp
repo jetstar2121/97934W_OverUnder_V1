@@ -25,7 +25,7 @@ Drive chassis(
 //Specify your drive setup below. There are seven options:
 //ZERO_TRACKER, TANK_ONE_ENCODER, TANK_ONE_ROTATION, TANK_TWO_ENCODER, TANK_TWO_ROTATION, HOLONOMIC_TWO_ENCODER, and HOLONOMIC_TWO_ROTATION
 //For example, if you are not using odometry, put ZERO_TRACKER below:
-TANK_TWO_ROTATION,
+ZERO_TRACKER,
 
 //Add the names of your Drive motors into the motor groups below, separated by commas, i.e. motor_group(Motor1,Motor2,Motor3).
 //You will input whatever motor names you chose when you configured your robot using the sidebar configurer, they don't have to be "Motor1" and "Motor2".
@@ -37,14 +37,14 @@ motor_group(front_left, mid_left, back_left),
 motor_group(front_right, mid_right, back_right),
 
 //Specify the PORT NUMBER of your inertial sensor, in PORT format (i.e. "PORT1", not simply "1"):
-PORT7,
+PORT15,
 
 //Input your wheel diameter. (4" omnis are actually closer to 4.125"):
 4.125,
 
 //External ratio, must be in decimal, in the format of input teeth/output teeth.
 //If your motor has an 84-tooth gear and your wheel has a 60-tooth gear, this value will be 1.4.
-//If the motor drives the wheel directly, this value is 1:
+//If the motor drives the wheel directly, this value is 1:m
 1.6,
 
 //Gyro scale, this is what your gyro reads when you spin the robot 360 degrees.
@@ -57,7 +57,7 @@ PORT7,
 /*  The rest of the drive constructor is for robots using POSITION TRACKING. */
 /*  If you are not using position tracking, leave the rest of the values as  */
 /*  they are.                                                                */
-/*---------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------*/ 
 
 //PAUSE! The rest of the drive constructor is for robot using POSITION TRACKING.
 //If you are not using position tracking, leave the rest of the values as they are.
@@ -112,7 +112,7 @@ void pre_auton(void) {
 
   while(auto_started == false){
     Brain.Screen.clearScreen();
-    switch(current_auton_selection){
+    switch(current_auton_selection){  
       case 0:
         Brain.Screen.printAt(50, 50, "Drive Test");
         break;

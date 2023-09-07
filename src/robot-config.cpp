@@ -10,17 +10,19 @@ brain  Brain;
 // VEXcode device constructors - TEMPORARY PORTS
 controller Controller1;
 
+pneumatics PTO(Brain.ThreeWirePort.A);
+
 distance Distance(PORT8);
 
-inertial inertial1(PORT7);
+inertial inertial1(PORT15);
 
-motor front_right(PORT1, ratio18_1, false);
+motor front_right(PORT5, ratio18_1, false);
 motor mid_right(PORT2, ratio18_1);
-motor back_right(PORT3, ratio18_1);
+motor back_right(PORT8, ratio18_1);  
 
 motor front_left(PORT7, ratio18_1, false);
 motor mid_left(PORT5, ratio18_1);
-motor back_left(PORT6, ratio18_1);
+motor back_left(PORT12, ratio18_1);
 
 motor intakes(PORT9, ratio18_1, true);
 
