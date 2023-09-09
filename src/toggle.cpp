@@ -2,10 +2,8 @@
 
 using namespace vex;
 
-
 class Toggle_Switch {
-public:
-
+   public:
     bool status;
 
     Toggle_Switch(bool initial) {
@@ -18,6 +16,4 @@ public:
     void set_status(bool new_status) {
         this->status = new_status;
     }
-
-
 };
