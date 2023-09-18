@@ -17,12 +17,12 @@ distance Distance(PORT8);
 inertial inertial1(PORT15);
 
 motor front_right(PORT5, ratio18_1, false);
-motor back_right(PORT2, ratio18_1);
+motor back_right(PORT20, ratio18_1);
 
 motor PTO_right(PORT8, ratio18_1);
 
 motor front_left(PORT7, ratio18_1, false);
-motor back_left(PORT5, ratio18_1);
+motor back_left(PORT1, ratio18_1);
 
 motor PTO_left(PORT12, ratio18_1);
 
