@@ -31,10 +31,10 @@ Drive chassis(
     // You will input whatever motor names you chose when you configured your robot using the sidebar configurer, they don't have to be "Motor1" and "Motor2".
 
     // Left Motors:
-    motor_group(front_left, back_left),
+    motor_group(front_left, mid_left, back_left),
 
     // Right Motors:
-    motor_group(front_right, back_right),
+    motor_group(front_right, mid_right, back_right),
 
     // Specify the PORT NUMBER of your inertial sensor, in PORT format (i.e. "PORT1", not simply "1"):
     PORT15,
@@ -112,7 +112,7 @@ void pre_auton(void) {
 
     // Tasks
     task i(intakes_task);
-    task p(PTO_task);
+    task p(catapult_task);
 
     while (auto_started == false) {
         Brain.Screen.clearScreen();

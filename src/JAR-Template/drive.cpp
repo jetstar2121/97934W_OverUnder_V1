@@ -353,8 +353,16 @@ void Drive::holonomic_drive_to_point(float X_position, float Y_position, float a
 }
 
 void Drive::control_arcade(){
-  DriveL.spin(fwd, to_volt(controller(primary).Axis3.value()+controller(primary).Axis4.value()), volt);
-  DriveR.spin(fwd, to_volt(controller(primary).Axis3.value()-controller(primary).Axis4.value()), volt);
+  front_left.spin(fwd, (Controller1.Axis3.value() + Controller1.Axis4.value()), pct);
+  mid_left.spin(fwd, (Controller1.Axis3.value() + Controller1.Axis4.value()), pct);
+  back_left.spin(fwd, (Controller1.Axis3.value() + Controller1.Axis4.value()), pct);
+
+  front_right.spin(fwd, (Controller1.Axis3.value() - Controller1.Axis4.value()), pct);
+  mid_right.spin(fwd, (Controller1.Axis3.value() - Controller1.Axis4.value()), pct);
+  back_right.spin(fwd, (Controller1.Axis3.value() - Controller1.Axis4.value()), pct);
+
+
+
 }
 
 void Drive::control_tank(){
