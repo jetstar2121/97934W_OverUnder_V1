@@ -112,7 +112,7 @@ void pre_auton(void) {
 
     // Tasks
     task i(intakes_task);
-    task p(catapult_task);
+    task c(catapult_task);
 
     while (auto_started == false) {
         Brain.Screen.clearScreen();

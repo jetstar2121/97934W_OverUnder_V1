@@ -19,14 +19,12 @@ distance Distance(PORT10);
 inertial inertial1(PORT15); 
 
 motor front_right(PORT5, ratio18_1, false);
-motor back_right(PORT7, ratio18_1);
+motor back_right(PORT7, ratio18_1, false);
+motor mid_right(PORT6, ratio18_1, false);
 
-motor mid_right(PORT6, ratio18_1);
-
-motor front_left(PORT1, ratio18_1, false);
-motor back_left(PORT4, ratio18_1);
-
-motor mid_left(PORT3, ratio18_1);
+motor front_left(PORT1, ratio18_1, true);
+motor back_left(PORT4, ratio18_1, true);
+motor mid_left(PORT15, ratio18_1, true);
 
 motor_group DT(front_right, mid_left,  front_left, back_right, mid_right, back_left);
 

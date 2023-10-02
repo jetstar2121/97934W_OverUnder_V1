@@ -353,15 +353,13 @@ void Drive::holonomic_drive_to_point(float X_position, float Y_position, float a
 }
 
 void Drive::control_arcade(){
-  front_left.spin(fwd, (Controller1.Axis3.value() + Controller1.Axis4.value()), pct);
-  mid_left.spin(fwd, (Controller1.Axis3.value() + Controller1.Axis4.value()), pct);
-  back_left.spin(fwd, (Controller1.Axis3.value() + Controller1.Axis4.value()), pct);
+  front_left.spin(fwd, (-(Controller1.Axis3.value()) + Controller1.Axis4.value()), pct);
+  mid_left.spin(fwd, (-(Controller1.Axis3.value()) + Controller1.Axis4.value()), pct);
+  back_left.spin(fwd, (-(Controller1.Axis3.value()) + Controller1.Axis4.value()), pct);
 
-  front_right.spin(fwd, (Controller1.Axis3.value() - Controller1.Axis4.value()), pct);
-  mid_right.spin(fwd, (Controller1.Axis3.value() - Controller1.Axis4.value()), pct);
-  back_right.spin(fwd, (Controller1.Axis3.value() - Controller1.Axis4.value()), pct);
-
-
+  front_right.spin(fwd, (-(Controller1.Axis3.value()) - Controller1.Axis4.value()), pct);
+  mid_right.spin(fwd, (-(Controller1.Axis3.value()) - Controller1.Axis4.value()), pct);
+  back_right.spin(fwd, (-(Controller1.Axis3.value()) - Controller1.Axis4.value()), pct);
 
 }
 
