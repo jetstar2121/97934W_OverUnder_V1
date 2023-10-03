@@ -4,18 +4,14 @@ using namespace vex;
 void cycle_cata() {
     catapult.spin(fwd, 25, rpm);
     waitUntil(cata_limit.PRESSED);
-    catapult.stop(hold);
-    wait(1000, msec);
+    catapult.stop(hold); 
 }
 
 int catapult_task() {
-    //cycle_cata();
+    cycle_cata();
     while (1) {
-        if(Controller1.ButtonL1.pressing()) {
-            catapult.spin(fwd, 200, rpm);
-        }
-        else {
-            catapult.stop(hold);
+        if (Controller1.ButtonA.PRESSED) {
+            cycle_cata();
         }
     }
     return 10;

@@ -24,8 +24,9 @@
 #include "JAR-Template/PID.h"
 #include "autons.h"
 #include "toggle.h"
-#include "tasks/intakes_task.h"
+#include "tasks/intakes.h"
 #include "tasks/catapult.h"
+#include "tasks/pneumatics.h"
 
 #define waitUntil(condition)                                                   \
   do {                                                                         \

@@ -14,6 +14,10 @@ controller Controller1;
 
 pneumatics PTO_piston(Brain.ThreeWirePort.A);
 
+pneumatics right_wing(Brain.ThreeWirePort.C);
+pneumatics left_wing(Brain.ThreeWirePort.D);
+pneumatics intakes_deployer(Brain.ThreeWirePort.E);
+
 distance Distance(PORT10);
 
 inertial inertial1(PORT15); 

@@ -11,6 +11,10 @@ extern distance Distance;
 
 extern pneumatics PTO_piston;
 
+extern pneumatics right_wing;
+extern pneumatics left_wing;
+extern pneumatics intakes_deployer;
+
 extern inertial inertial1;
 
 extern motor front_right;
