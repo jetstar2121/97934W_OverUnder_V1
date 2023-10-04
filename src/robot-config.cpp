@@ -20,7 +20,7 @@ pneumatics intakes_deployer(Brain.ThreeWirePort.E);
 
 distance Distance(PORT10);
 
-inertial inertial1(PORT15); 
+inertial inertial1(PORT21); 
 
 motor front_right(PORT5, ratio18_1, false);
 motor back_right(PORT7, ratio18_1, false);

@@ -37,7 +37,7 @@ Drive chassis(
     motor_group(front_right, mid_right, back_right),
 
     // Specify the PORT NUMBER of your inertial sensor, in PORT format (i.e. "PORT1", not simply "1"):
-    PORT15,
+    PORT21,
 
     // Input your wheel diameter. (4" omnis are actually closer to 4.125"):
     4.125,
