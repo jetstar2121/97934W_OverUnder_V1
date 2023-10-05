@@ -12,7 +12,7 @@ void toggle_left_wing() {
 }
 
 int pneumatics_task() {
-    intakes_deployer.open();
+    
     while (1) {
         if (Controller1.ButtonA.PRESSED) {
             toggle_right_wing();
@@ -35,7 +35,7 @@ int pneumatics_task() {
             left_wing.open();
         } else {
             left_wing.close();
-        }
+        }   
     }
     return 10;
 }

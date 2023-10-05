@@ -111,7 +111,8 @@ void pre_auton(void) {
     default_constants();
 
     // Tasks
-    task i(intakes_task);
+    inertial1.calibrate();
+
     task c(catapult_task);
     task p(pneumatics_task);
 
@@ -158,10 +159,10 @@ void autonomous(void) {
     auto_started = true;
     switch (current_auton_selection) {
         case 0:
-            drive_test();  // This is the default auton, if you don't select from the brain.
+            auto1();  // This is the default auton, if you don't select from the brain.
             break;
         case 1:
-            drive_test();
+            auto1();
             break;
         case 2:
             turn_test();
@@ -202,7 +203,10 @@ void usercontrol(void) {
         // values based on feedback from the joysticks.
 
         // Replace this line with chassis.control_tank(); for tank drive.
+        task i(intakes_task);
+
         chassis.control_arcade();
+        intakes_deployer.open();
 
         wait(20, msec);  // Sleep the task for a short amount of time to
                          // prevent wasted resources.

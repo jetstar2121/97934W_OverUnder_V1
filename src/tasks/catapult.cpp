@@ -8,6 +8,11 @@ void cycle_cata() {
     waitUntil(cata_limit.PRESSED);
     catapult.stop(hold);
 }
+void cycle_cata(double speed) {
+    catapult.spin(fwd, speed, rpm);
+    waitUntil(cata_limit.PRESSED);
+    catapult.stop(hold);
+}
 
 void toggle_subsystem_switcher() {
     subsystem_switcher = !subsystem_switcher;
@@ -22,7 +27,7 @@ int catapult_task() {
     cycle_cata();
 
     while (1) {
-        if (Controller1.ButtonRight.PRESSED) {
+        if (Controller1.ButtonUp.PRESSED) {
             toggle_subsystem_switcher();
         }
 
