@@ -15,10 +15,10 @@ void auto1() {
     wait(250, msec);
     cycle_cata(100);
     intakes_deployer.open();
-    intakes.spinFor(reverse, 300, deg, 600, rpm, false);
+    intakes.spinFor(reverse, 260, deg, 600, rpm, false);
     chassis.drive_distance(-42);
     wait(250, msec);
-    chassis.turn_to_angle(-90);
+    chassis.turn_to_angle(90);
     wait(250, msec);
     intakes.spinFor(fwd, 230, deg, 600, rpm);
     wait(250, msec);
@@ -26,6 +26,25 @@ void auto1() {
     wait(250, msec);
     chassis.drive_distance(15);
     wait(250, msec);
+    chassis.turn_to_angle(240);
+    wait(250, msec);
+    chassis.drive_distance(-10);
+    intakes.spinFor(reverse, 300, deg, 600, rpm);
+    wait(250, msec);
+    chassis.drive_distance(13);
+    wait(250, msec);
+    chassis.turn_to_angle(90);
+    intakes.spinFor(fwd, 230, deg, 600, rpm);
+    chassis.drive_distance(-17);
+    wait(100, msec);
+    chassis.drive_distance(-17);
+
+    
+
+
+
+
+    /* 
     chassis.turn_to_angle(-145);
     chassis.drive_distance(-30);
     right_wing_status = true;
@@ -33,7 +52,7 @@ void auto1() {
     chassis.drive_distance(-40, -270);
     right_wing_status = false;
     chassis.drive_distance(-28, -250);
-    
+  */
 }
 
 void turn_test() {
