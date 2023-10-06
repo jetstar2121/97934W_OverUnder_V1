@@ -9,18 +9,21 @@ void default_constants() {
     chassis.set_turn_exit_conditions(1, 300, 3000);
     chassis.set_swing_exit_conditions(1, 300, 3000);
 }
-
+//he
 void auto1() {
-    intakes_deployer.open();
+    
     wait(250, msec);
     cycle_cata(100);
-    intakes.spinFor(reverse, 200, deg, 600, rpm, false);
+    intakes_deployer.open();
+    intakes.spinFor(reverse, 300, deg, 600, rpm, false);
     chassis.drive_distance(-42);
     wait(250, msec);
     chassis.turn_to_angle(-90);
     wait(250, msec);
-    intakes.spinFor(fwd, 500, deg, 600, rpm);
-    chassis.drive_distance(-10); 
+    intakes.spinFor(fwd, 230, deg, 600, rpm);
+    wait(250, msec);
+    chassis.drive_distance(-10);
+    wait(250, msec);
     chassis.drive_distance(15);
     wait(250, msec);
     chassis.turn_to_angle(-145);
@@ -29,12 +32,8 @@ void auto1() {
     wait(250, msec);
     chassis.drive_distance(-40, -270);
     right_wing_status = false;
-    chassis.drive_distance(-30, -260);
-
+    chassis.drive_distance(-28, -250);
     
-
-
-
 }
 
 void turn_test() {
