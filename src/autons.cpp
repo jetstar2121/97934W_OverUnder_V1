@@ -9,20 +9,17 @@ void default_constants() {
     chassis.set_turn_exit_conditions(1, 300, 3000);
     chassis.set_swing_exit_conditions(1, 300, 3000);
 }
-//he
+// he
 void auto1() {
-    
-    intakes.spinFor(fwd, 30000, msec, 600, rpm);
+    cycle_cata();
+    intakes_deployer.open();
+    chassis.drive_distance(3);
+    intakes.spinFor(fwd, 45000, msec, 600, rpm);
     intakes.stop(brake);
-     wait(250, msec);
-     chassis.drive_distance(-50);
+    wait(250, msec);
+    chassis.drive_distance(-75);
 
-    
-
-
-
-
-    /* 
+    /*
     chassis.turn_to_angle(-145);
     chassis.drive_distance(-30);
     right_wing_status = true;
